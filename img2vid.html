@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画龙点睛 - 视频创作</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: #e6e6fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 5em;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 ruby {
+            font-size: 0.35em;
+            opacity: 0.8;
+        }
+        h1 rt {
+            color: #666;
+        }
+        .attribution {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1em;
+            font-style: italic;
+        }
+        .attribution span {
+            display: inline-block;
+            position: relative;
+            padding: 0 1.5rem;
+        }
+        .attribution span::before,
+        .attribution span::after {
+            content: "•";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9090ff;
+        }
+        .attribution span::before {
+            left: 0;
+        }
+        .attribution span::after {
+            right: 0;
+        }
+        .video-container {
+            width: 100%;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        video {
+            max-width: 100%;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .scene-description {
+            margin: 2rem 0;
+            line-height: 1.8;
+        }
+        .scene-description strong {
+            color: #666;
+            margin-right: 1rem;
+        }
+        .dialogue-section {
+            margin: 2rem 0;
+        }
+        .dialogue-title {
+            color: #333;
+            font-size: 1.2em;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #9090ff;
+        }
+        .dialogue {
+            background: #f5f5ff;
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+        .dialogue p {
+            margin: 0.5rem 0;
+            line-height: 1.8;
+        }
+        .credits {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+        .credits a {
+            color: #9090ff;
+            text-decoration: none;
+        }
+        .credits a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>
+            <ruby>画<rt>huà</rt></ruby>
+            <ruby>龙<rt>lóng</rt></ruby>
+            <ruby>点<rt>diǎn</rt></ruby>
+            <ruby>睛<rt>jīng</rt></ruby>
+        </h1>
+        <p class="attribution">
+            <span>by Miuyun • 由即梦AI生成</span>
+        </p>
+
+        <div class="video-container">
+            <video controls>
+                <source src="画龙点睛.mp4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+
+        <div class="scene-description">
+            <p><strong>场景一：</strong>大全景展现画师潇洒地甩动毛笔，准备开始作画。每一个动作都充满大师风范，暗示即将开始的不凡创作。</p>
+            <p><strong>场景二：</strong>全景视角下，墙上的白龙轮廓渐渐清晰。流畅的线条勾勒出龙的身形，却独独缺少了点睛之笔。</p>
+            <p><strong>场景三：</strong>特写镜头捕捉到关键时刻：墙上的白龙终于获得了明亮的双眼。这一笔点睛之笔，让整幅画作有了灵魂。</p>
+            <p><strong>场景四：</strong>特写镜头中，令人惊叹的一幕发生了——墙上的白龙突然活了过来，仿佛要破墙而出，腾飞九天。</p>
+        </div>
+
+        <div class="dialogue-section">
+            <h3 class="dialogue-title">配音文本</h3>
+            <div class="dialogue">
+                <p>- 画得太好太逼真了！</p>
+                <p>- 美中不足的是没有眼睛。</p>
+                <p>- 大师，把龙的眼睛点上吧。</p>
+                <p>- 唉，你们不懂，点上了眼珠，这些龙会飞走的。</p>
+                <p>- 怎么可能？</p>
+                <p>- 你说谎！</p>
+            </div>
+        </div>
+
+        <div class="credits">
+            <p>制作说明：</p>
+            <ul>
+                <li>视频采用即梦视频1.2版本，通过首尾帧生成</li>
+                <li>配音由 <a href="https://www.text-to-speech.cn/" target="_blank">Text-to-Speech</a> 提供支持</li>
+                <li>使用剪映进行后期剪辑制作</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

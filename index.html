@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miuyun's Personal Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background-color: #e6e6fa;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #e6e6fa;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .elements-guide {
+            background-color: #e6e6fa;
+            padding: 4rem 2rem 2rem 2rem;
+            text-align: left;
+            min-height: 100vh;
+            margin-bottom: 2rem;
+        }
+        .elements-guide h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5em;
+        }
+        .elements-guide h3 {
+            color: #444;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            font-size: 2em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .elements-guide h3 sub {
+            font-size: 0.5em;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        .elements-guide h4 {
+            color: #666;
+            margin-top: 1.5rem;
+            font-size: 1.5em;
+        }
+        .elements-section {
+            margin-bottom: 3rem;
+            padding: 0 1rem;
+        }
+        .element-example {
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .element-demo {
+            border-left: 4px solid #9090ff;
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+        .page-section {
+            scroll-snap-align: start;
+            min-height: 100vh;
+            padding-bottom: 2rem;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .section {
+            flex: 1;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        #everything {
+            background-color: white;
+            color: black;
+        }
+        #nothing {
+            background-color: black;
+            color: white;
+        }
+        .lightbulb {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .section:hover .lightbulb {
+            display: block;
+        }
+        .content {
+            display: none;
+            margin-top: 1rem;
+        }
+        .translate-btn {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.5rem 1.5rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid currentColor;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .translate-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        #everything .translate-btn {
+            color: black;
+        }
+        #nothing .translate-btn {
+            color: white;
+        }
+        .translated-content {
+            display: none;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+        .time {
+            text-align: center;
+            padding: 0.5rem;
+            background-color: #e6e6fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="page-section">
+            <header>
+                <h1>Welcome to <ruby>Miuyun<rt>みうゆん</rt></ruby>'s Website</h1>
+                <p class="time">Current time: <strong id="current-time">2024-12-07 16:47:29 UTC+8</strong></p>
+            </header>
+
+            <div class="container">
+                <div id="everything" class="section">
+                    <h2>Everything</h2>
+                    <span class="lightbulb">💡</span>
+                    <div class="content">
+                        <h3>Everything contains:</h3>
+                        <p><mark>Nothing</mark> is the essence of <em>everything</em></p>
+                        <dl>
+                            <dt><strong>Definition of Everything:</strong></dt>
+                            <dd>The sum or total of all things that exist<sup>[1]</sup></dd>
+                            <dt><em>Philosophical perspective:</em></dt>
+                            <dd>A concept that encompasses both being and non-being</dd>
+                        </dl>
+                        <ul>
+                            <li><strong>Paradox</strong>: Everything must contain nothing to be complete</li>
+                            <li>The concept of <abbr title="Everything">∀</abbr> includes its opposite</li>
+                            <li>In quantum physics<sub>theory</sub>, everything emerges from nothing</li>
+                        </ul>
+                        <button class="translate-btn">翻译</button>
+                        <div class="translated-content">
+                            <h3>一切包含：</h3>
+                            <p><mark>虚无</mark>是<em>一切</em>的本质</p>
+                            <dl>
+                                <dt><strong>一切的定义：</strong></dt>
+                                <dd>存在的所有事物的总和<sup>[1]</sup></dd>
+                                <dt><em>哲学视角：</em></dt>
+                                <dd>一个包含存在和非存在的概念</dd>
+                            </dl>
+                            <ul>
+                                <li><strong>悖论</strong>：一切必须包含虚无才能完整</li>
+                                <li><abbr title="一切">∀</abbr>的概念包含其对立面</li>
+                                <li>在量子物理<sub>理论</sub>中，一切源于虚无</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="nothing" class="section">
+                    <h2>Nothing</h2>
+                    <span class="lightbulb">💡</span>
+                    <div class="content">
+                        <h3>Nothing contains:</h3>
+                        <p><mark>Everything</mark> exists within <em>nothingness</em></p>
+                        <ol>
+                            <li><b>Void</b> is not empty</li>
+                            <li>Zero contains infinite <strong>potential</strong></li>
+                            <li>Nothing is something<sub>paradox</sub></li>
+                        </ol>
+                        <dl>
+                            <dt><em>Zen perspective:</em></dt>
+                            <dd>Emptiness is form, form is emptiness<sup>†</sup></dd>
+                        </dl>
+                        <button class="translate-btn">翻译</button>
+                        <div class="translated-content">
+                            <h3>虚无包含：</h3>
+                            <p><mark>一切</mark>存在于<em>虚无</em>之中</p>
+                            <ol>
+                                <li><b>空虚</b>并非空无一物</li>
+                                <li>零包含无限<strong>可能</strong></li>
+                                <li>虚无即是存在<sub>悖论</sub></li>
+                            </ol>
+                            <dl>
+                                <dt><em>禅宗视角：</em></dt>
+                                <dd>色即是空，空即是色<sup>†</sup></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section elements-guide">
+            <h2><ruby>HTML<rt>エイチティーエムエル</rt></ruby> Elements Guide</h2>
+            
+            <div class="elements-section">
+                <h3>
+                    Grouping Elements
+                    <sub>structural</sub>
+                </h3>
+                <p>These elements create the <strong>fundamental structure</strong> of our webpage:</p>
+                
+                <h4>1. Heading Hierarchy</h4>
+                <div class="element-demo">
+                    <ol>
+                        <li><mark>h1</mark>: Used for the main title - <em>"Welcome to Miuyun's Website"</em></li>
+                        <li><mark>h2</mark>: For major sections - <em>"Everything"</em> and <em>"Nothing"</em></li>
+                        <li><mark>h3</mark>: For subsections</li>
+                        <li><mark>h4</mark>: For smaller divisions <sub>like this section</sub></li>
+                    </ol>
+                </div>
+
+                <h4>2. Content Organization</h4>
+                <div class="element-demo">
+                    <dl>
+                        <dt><b>Paragraphs</b> (<abbr title="paragraph element">p</abbr>)</dt>
+                        <dd>Basic text blocks that form the main content</dd>
+                        
+                        <dt><b>Unordered Lists</b> (<abbr title="unordered list">ul</abbr>)</dt>
+                        <dd>For non-sequential items, like in the "Everything" section:
+                            <ul>
+                                <li>Bullet points</li>
+                                <li>Non-ordered items</li>
+                            </ul>
+                        </dd>
+                        
+                        <dt><b>Ordered Lists</b> (<abbr title="ordered list">ol</abbr>)</dt>
+                        <dd>For sequential items, as shown in the "Nothing" section:
+                            <ol>
+                                <li>First point</li>
+                                <li>Second point</li>
+                            </ol>
+                        </dd>
+                        
+                        <dt><b>Description Lists</b> (<abbr title="description list">dl</abbr>)</dt>
+                        <dd>For term-definition pairs, using <mark>dt</mark> and <mark>dd</mark></dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="elements-section">
+                <h3>
+                    Document Level Elements
+                    <sub>semantic</sub>
+                </h3>
+                <p>These elements add <em>meaning</em> and <strong>emphasis</strong> to our content:</p>
+                
+                <div class="element-example">
+                    <ul>
+                        <li><mark>mark</mark>: For <mark>highlighted</mark> text</li>
+                        <li><em>em</em>: For <em>emphasized</em> content</li>
+                        <li><b>b</b> vs <strong>strong</strong>: <b>Bold</b> for attention, <strong>important</strong> for significance</li>
+                        <li><ruby>ruby<rt>ルビ</rt></ruby>: For pronunciation guides</li>
+                        <li>sup<sup>[1]</sup>: For superscript text</li>
+                        <li>sub<sub>note</sub>: For subscript text</li>
+                        <li><abbr title="abbreviation">abbr</abbr>: For abbreviations (hover to see full text)</li>
+                    </ul>
+                </div>
+
+                <p class="element-demo">
+                    These elements combine to create a <mark>semantic</mark> and <em>meaningful</em> document structure. 
+                    For example, this website uses <strong>contrasting sections</strong> to explore the relationship between 
+                    <ruby>Everything<rt>すべて</rt></ruby> and <ruby>Nothing<rt>無</rt></ruby><sub>∅</sub>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lightbulb click handler
+        document.querySelectorAll('.lightbulb').forEach(bulb => {
+            bulb.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                content.style.display = content.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+
+        // Translation button click handler
+        document.querySelectorAll('.translate-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const translatedContent = this.nextElementSibling;
+                const originalContent = this.previousElementSibling;
+                
+                if (translatedContent.style.display === 'none' || !translatedContent.style.display) {
+                    translatedContent.style.display = 'block';
+                    this.textContent = '显示英文';
+                    // Hide all content before the button except the h3
+                    let current = this.previousElementSibling;
+                    while (current) {
+                        if (current.tagName !== 'H3') {
+                            current.style.display = 'none';
+                        }
+                        current = current.previousElementSibling;
+                    }
+                } else {
+                    translatedContent.style.display = 'none';
+                    this.textContent = '翻译';
+                    // Show all content before the button
+                    let current = this.previousElementSibling;
+                    while (current) {
+                        current.style.display = '';
+                        current = current.previousElementSibling;
+                    }
+                }
+            });
+        });
+
+        // Dynamic time update
+        function updateTime() {
+            const now = new Date();
+            const options = {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+            const timeStr = now.toLocaleString('en-US', options)
+                .replace(',', '')
+                .replace(/(\d+)\/(\d+)\/(\d+)/, '$3-$1-$2');
+            document.getElementById('current-time').textContent = timeStr + ' UTC+8';
+        }
+
+        // Update time immediately and then every second
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

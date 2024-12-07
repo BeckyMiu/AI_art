@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画龙点睛 - 图片生成</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: #e6e6fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 5em;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 ruby {
+            font-size: 0.35em;
+            opacity: 0.8;
+        }
+        h1 rt {
+            color: #666;
+        }
+        .attribution {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1em;
+            font-style: italic;
+        }
+        .attribution span {
+            display: inline-block;
+            position: relative;
+            padding: 0 1.5rem;
+        }
+        .attribution span::before,
+        .attribution span::after {
+            content: "•";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9090ff;
+        }
+        .attribution span::before {
+            left: 0;
+        }
+        .attribution span::after {
+            right: 0;
+        }
+        .scene {
+            margin-bottom: 3rem;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .scene h3 {
+            color: #444;
+            margin-bottom: 1.5rem;
+            font-size: 1.4em;
+            border-bottom: 1px solid #9090ff;
+            padding-bottom: 0.5rem;
+        }
+        .prompt-list {
+            background: #f5f5ff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+        .prompt-list ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+        .prompt-list li {
+            margin: 0.3rem 0;
+        }
+        .image-display {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .image-display img {
+            max-width: 100%;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .process-description {
+            color: #666;
+            line-height: 1.8;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>
+            <ruby>画<rt>huà</rt></ruby>
+            <ruby>龙<rt>lóng</rt></ruby>
+            <ruby>点<rt>diǎn</rt></ruby>
+            <ruby>睛<rt>jīng</rt></ruby>
+        </h1>
+        <p class="attribution">
+            <span>by Miuyun • 图片由 Midjourney 生成</span>
+        </p>
+        
+        <div class="scene">
+            <h3>场景一：静止的白龙</h3>
+            <div class="prompt-list">
+                <p><strong>提示词：</strong></p>
+                <ul>
+                    <li>Chinese master painter in traditional Song dynasty robe</li>
+                    <li>Inside ancient Buddhist temple</li>
+                    <li>Painting massive white dragons on wall</li>
+                    <li>Dragons without eyes</li>
+                    <li>Ethereal atmosphere</li>
+                    <li>Soft natural light through temple windows</li>
+                    <li>Amazed monks watching</li>
+                    <li>Detailed brushwork</li>
+                    <li>Cinematic composition</li>
+                </ul>
+                <p><em>参数设置：</em> --ar 16:9 --style raw --personalize thrtdgi --v 6.1</p>
+            </div>
+            <div class="image-display">
+                <img src="画龙点睛1.png" alt="场景一：宋朝画师作画">
+            </div>
+            <p class="process-description">
+                宋代寺庙中，画师正在墙上绘制巨大的白龙。龙的眼睛尚未点上，
+                通过寺庙窗户透入的自然光营造出空灵的氛围，周围的僧人正在惊叹地观看。
+            </p>
+        </div>
+
+        <div class="scene">
+            <h3>场景二：点睛之时</h3>
+            <div class="prompt-list">
+                <p><strong>提示词：</strong></p>
+                <ul>
+                    <li>The white dragon have a black ink eye</li>
+                    <li>White smoke fills the scene</li>
+                    <li>Creating a cinematic feel</li>
+                    <li>Rendered using a high-resolution C4D OC renderer</li>
+                </ul>
+                <p><em>参数设置：</em> --ar 16:9 --style raw --personalize thrtdgi --v 6.1</p>
+            </div>
+            <div class="image-display">
+                <img src="画龙点睛2.png" alt="场景二：龙眼绽放">
+            </div>
+            <p class="process-description">
+                通过 Midjourney Editor 放大重绘，为白龙添加了墨色的眼睛。
+                场景中弥漫的白烟增添了电影感，高分辨率渲染使画面更加细腻。
+            </p>
+        </div>
+
+        <div class="scene">
+            <h3>场景三：腾龙升天</h3>
+            <div class="prompt-list">
+                <p><strong>提示词：</strong></p>
+                <ul>
+                    <li>Golden Dragon Scale</li>
+                    <li>Reality</li>
+                    <li>Chinese ancient fairy</li>
+                </ul>
+                <p><em>参数设置：</em> --ar 16:9 --style raw --personalize thrtdgi --v 6.1</p>
+            </div>
+            <div class="image-display">
+                <img src="画龙点睛3.png" alt="场景三：龙鳞细节">
+            </div>
+            <p class="process-description">
+                通过材质更换，为龙鳞添加了金色质感，使龙的形象更加真实立体，
+                呈现出腾龙欲飞的瞬间，保持了中国古代神话的玄幻氛围。
+            </p>
+        </div>
+
+        <p style="text-align: center; margin-top: 2rem; color: #666;">
+            <em>这三个场景将作为分镜，用于后续视频制作</em>
+        </p>
+    </div>
+</body>
+</html>
